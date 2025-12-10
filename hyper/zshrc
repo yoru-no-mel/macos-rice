@@ -1,0 +1,21 @@
+setopt PROMPT_SUBST
+
+git_branch() {
+    local branch
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        branch=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null)
+        echo " - $branch"
+    fi
+}
+
+short_path() {
+    local full_path="${PWD/#$HOME/~}"
+
+    if [[ ${#full_path} -gt 30 ]]; then
+        echo ".../${PWD##*/}"
+    else
+        echo "$full_path"
+    fi
+}
+
+PROMPT='%F{green}%n%f@%F{cyan}%m%f: [%F{yellow}$(short_path)%f%F{magenta}$(git_branch)%f] $ '
