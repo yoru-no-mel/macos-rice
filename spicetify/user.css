@@ -313,9 +313,6 @@ div[class*="minBlockSize_56px-padding_8px"] {
 .main-card-imageContainer > div:first-child {
     background-color: var(--card-color, var(--spice-border-inactive));
 }
-.main-avatar-avatar {
-    background-color: var(--spice-border-inactive) !important;
-}
 .main-entityHeader-title h1,
 .main-entityHeader-title span {
     color: var(--spice-banner);
@@ -828,11 +825,11 @@ form .main-topBar-searchBar:placeholder-shown {
     .playback-progressbar-isInteractive:focus-within
     .x-progressBar-fillColor {
     height: 9px;
-    background-color: transparent;
+    /* background-color: transparent; */
     border-bottom: 2px dashed var(--fg-color);
 }
 .volume-bar__slider-container .x-progressBar-progressBarBg {
-    background-color: transparent;
+    /* background-color: transparent; */
 }
 
 /* player controls */
@@ -980,12 +977,18 @@ button:has(
     fill: var(--spice-accent-active);
 }
 
-/* .custom-navlinks-scrollable_container {
+.custom-navlinks-scrollable_container {
     display: none;
     visibility: hidden;
-} */
+}
 
 /* .Root__right-sidebar {
     display: none;
     visibility: hidden;
 } */
+
+/* hide artist porofile background image*/
+.before-scroll-node > div {
+    display: none;
+  }
+  
