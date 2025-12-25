@@ -380,18 +380,18 @@ div[style*="--text-subdued: rgba(255, 255, 255, 0.7);"] {
 .main-globalNav-searchContainer
     form
     div:has(> .main-topBar-searchBar:focus)::before {
-    content: "Search";
+    content: "";
     color: var(--spice-border-active) !important;
 }
 .Root__nav-bar
     .main-yourLibraryX-entryPoints:has(.main-yourLibraryX-navItems)::before {
-    content: "Pages";
+    content: "";
 }
 .Root__nav-bar
     .main-yourLibraryX-entryPoints:has(
         .main-yourLibraryX-libraryContainer
     )::before {
-    content: "Library";
+    content: "";
 }
 .Root__main-view::before {
     content: "";
@@ -450,7 +450,7 @@ dialog {
 .GenericModal::before,
 .GenericModal__overlay > div::before,
 dialog::before {
-    content: "Modal";
+    content: "";
     color: var(--spice-border-active);
     position: absolute;
     margin: -10px 4px;
@@ -987,7 +987,7 @@ button:has(
     visibility: hidden;
 } */
 
-/* hide artist porofile background image*/
+
 .before-scroll-node > div {
     display: none;
   }
